@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "autoname": "format:FM-{######}",
+ "creation": "2024-02-18 05:58:34.491644",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "section_break_ecjw",
+  "related_as",
+  "age",
+  "marital_status",
+  "column_break_iwzu",
+  "email_address",
+  "education_or_occupation",
+  "phone_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "related_as",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Related As",
+   "length": 144,
+   "not_nullable": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Marital Status",
+   "length": 15
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "education_or_occupation",
+   "fieldtype": "Data",
+   "label": "Education Or Occupation"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "length": 30
+  },
+  {
+   "fieldname": "section_break_ecjw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_iwzu",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-18 06:23:55.352978",
+ "modified_by": "Administrator",
+ "module": "Sbms Survey",
+ "name": "Family Members",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

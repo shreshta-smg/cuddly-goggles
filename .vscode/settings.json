@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "~/bench-1/apps/frappe"
+    ]
+}

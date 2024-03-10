@@ -1,0 +1,170 @@
+{
+ "actions": [],
+ "autoname": "format:FD-{######}",
+ "creation": "2024-02-18 04:55:00.013693",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "family_id",
+  "column_break_wcji",
+  "full_name",
+  "section_break_rfbk",
+  "address",
+  "veda",
+  "gotra",
+  "category",
+  "email_address",
+  "column_break_mlft",
+  "area",
+  "taluk",
+  "profession",
+  "sub_category",
+  "phone_number",
+  "section_break_takq",
+  "family_members"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_mlft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "label": "Area",
+   "length": 144
+  },
+  {
+   "fieldname": "taluk",
+   "fieldtype": "Data",
+   "label": "Taluk",
+   "length": 144
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category",
+   "length": 25
+  },
+  {
+   "fieldname": "sub_category",
+   "fieldtype": "Data",
+   "label": "Sub Category",
+   "length": 144
+  },
+  {
+   "fieldname": "gotra",
+   "fieldtype": "Data",
+   "label": "Gotra"
+  },
+  {
+   "fieldname": "profession",
+   "fieldtype": "Data",
+   "label": "Profession"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "length": 30
+  },
+  {
+   "fieldname": "section_break_takq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "family_members",
+   "fieldtype": "Table",
+   "label": "Family Members",
+   "options": "Family Members"
+  },
+  {
+   "fieldname": "section_break_rfbk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "family_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "FamilyID",
+   "not_nullable": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_wcji",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "veda",
+   "fieldtype": "Data",
+   "label": "Veda",
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-09 13:54:43.418348",
+ "modified_by": "Administrator",
+ "module": "Sbms Survey",
+ "name": "Family Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SBMSManager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SBMSUser",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "family_id"
+}
