@@ -45,6 +45,14 @@ def format_phone_number(raw_number, country_code="IN"):
     except phonenumbers.NumberParseException:
         return None  # Handle parsing errors
 
+def validated_email(list_of_emails):
+    """Validate a list of emails and return the first valid one."""
+    for email in list_of_emails:
+        email_valid = frappe.utils.validate_email_address(email.strip().lower().replace(' ', ''))
+        if email_valid:
+            return email_valid
+    return None  # Return None if no valid email found
+
 
 def save_family_details():
      """Batch insert data from files"""
@@ -58,9 +66,9 @@ def save_family_details():
             doc = frappe.new_doc("Family Details")
             familyID = row[6]
             sl_no = row[3]
-            doc.set('full_name', row[8] if row[8] else 'NA')
+            doc.set('full_name', row[8].upper() if row[8] else 'NA')
             doc.set('address_line_1', row[0])
-            doc.set('email_address', row[1].lower().replace(' ', '') if row[1] else None)
+            doc.set('email_address', validated_email([row[1], row[7]]))
             doc.set('veda' , row[2])
             doc.set('taluk', row[4])
             doc.set('gotra', row[5])
@@ -72,11 +80,11 @@ def save_family_details():
             family_members = [family_member for family_member in family_member_details if (familyID and family_member[3] == familyID) or (sl_no and family_member[4] == sl_no)]
             for member in family_members:
                 doc.append('family_members', {
-                    'full_name': member[9] if member[9] else 'NA',
+                    'full_name': member[9].upper() if member[9] else 'NA',
                     'related_as': member[1],
                     'marital_status': member[8],
                     'phone_number': format_phone_number(member[6]),
-                    'email_address': member[5].lower().replace(' ', '') if member[5] else None,
+                    'email_address': validated_email([member[0],member[5], member[7]]),
                     'education_or_occupation': member[7],
                     'age': member[2]
                 })
