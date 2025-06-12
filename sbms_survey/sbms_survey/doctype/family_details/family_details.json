@@ -5,11 +5,9 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "family_id",
-  "column_break_wcji",
-  "full_name",
   "section_break_rfbk",
-  "address",
+  "full_name",
+  "address_line_1",
   "veda",
   "gotra",
   "category",
@@ -30,11 +28,6 @@
    "in_list_view": 1,
    "label": "Full Name",
    "reqd": 1
-  },
-  {
-   "fieldname": "address",
-   "fieldtype": "Data",
-   "label": "Address"
   },
   {
    "fieldname": "column_break_mlft",
@@ -77,11 +70,13 @@
   {
    "fieldname": "email_address",
    "fieldtype": "Data",
-   "label": "Email Address"
+   "label": "Email Address",
+   "options": "Email"
   },
   {
    "fieldname": "phone_number",
-   "fieldtype": "Data",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
    "label": "Phone Number",
    "length": 30
   },
@@ -100,28 +95,20 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "family_id",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "FamilyID",
-   "not_nullable": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
-   "fieldname": "column_break_wcji",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "veda",
    "fieldtype": "Data",
    "label": "Veda",
    "search_index": 1
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-09 13:54:43.418348",
+ "modified": "2025-06-11 16:39:38.483167",
  "modified_by": "Administrator",
  "module": "Sbms Survey",
  "name": "Family Details",
@@ -163,8 +150,10 @@
    "share": 1
   }
  ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "family_id"
+ "title_field": "full_name"
 }
