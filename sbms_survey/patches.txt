@@ -4,4 +4,5 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
-sbms_survey.sbms_survey.doctype.family_details.patches.batch_insert_all_data_from_files
+# sbms_survey.sbms_survey.doctype.family_details.patches.batch_insert_all_data_from_files
+# sbms_survey.sbms_survey.doctype.member_details.patches.batch_insert_rem_data_from_files

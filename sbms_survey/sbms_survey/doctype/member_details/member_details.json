@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "creation": "2025-06-16 16:18:23.028368",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "age",
+  "marital_status",
+  "education_profession",
+  "column_break_cvzk",
+  "related_as",
+  "email_address",
+  "phone_number",
+  "family_ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "length": 144,
+   "reqd": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Data",
+   "label": "Marital Status"
+  },
+  {
+   "fieldname": "column_break_cvzk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "related_as",
+   "fieldtype": "Data",
+   "label": "Related As"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "family_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Family Reference",
+   "options": "Family Details"
+  },
+  {
+   "fieldname": "education_profession",
+   "fieldtype": "Data",
+   "label": "Education/Occupation"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-16 16:50:36.367993",
+ "modified_by": "Administrator",
+ "module": "Sbms Survey",
+ "name": "Member Details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
